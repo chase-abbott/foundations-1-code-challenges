@@ -88,6 +88,9 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    const arrayOfArrays = arr.map(object =>)
+    const arrayOfArrays = arr.map(object => ([
+        [Object.keys(object)[0], Object.values(object)[0]],
+        [Object.keys(object)[1], Object.values(object)[1]]
+    ]))
     return arrayOfArrays;
 }
