@@ -1,4 +1,4 @@
-import { 
+import {
     makeMoreScreamingKeys,
     makeWeirdStringFromKeys,
     makeTuples
@@ -6,13 +6,13 @@ import {
 
 const { test, skip } = QUnit;
 
-const pet = { 
-    name: 'scooter', 
+const pet = {
+    name: 'scooter',
     age: 1,
     type: 'puppy',
 };
 
-skip('should return an object with screaming keys', (expect) => {
+test('should return an object with screaming keys', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
@@ -20,7 +20,7 @@ skip('should return an object with screaming keys', (expect) => {
         AGE: 1,
         TYPE: 'puppy'
     };
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeMoreScreamingKeys(pet);
@@ -39,7 +39,7 @@ skip('should make a string from the keys', (expect) => {
     // Call the function you're testing and set the result to a const
     const actual = makeWeirdStringFromKeys(pet);
 
-    const shouldBeTrue = actual.includes('name') && actual.includes('age') && actual.includes('type');  
+    const shouldBeTrue = actual.includes('name') && actual.includes('age') && actual.includes('type');
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(true, shouldBeTrue);
@@ -53,7 +53,7 @@ skip('should return tuples', (expect) => {
         ['age', 1],
         ['type', 'puppy']
     ];
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeTuples(pet);

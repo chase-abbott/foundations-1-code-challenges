@@ -34,8 +34,8 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    const hungryArray = arr.map(object => ({ name: object.name, isHungry: true, type: object.type }));
-    return hungryArray;
+    arr.map(object => object.isHungry = true);
+    return arr;
 }
 
 /*
@@ -89,8 +89,9 @@ Output:
 
 export function makeArrayOfArraysOfArrays(arr) {
     const arrayOfArrays = arr.map(object => ([
-        [Object.keys(object)[0], Object.values(object)[0]],
-        [Object.keys(object)[1], Object.values(object)[1]]
+        ['name', object.name],
+        ['type', object.type]
+
     ]))
     return arrayOfArrays;
 }
