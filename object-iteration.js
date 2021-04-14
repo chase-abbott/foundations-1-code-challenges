@@ -45,7 +45,11 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
+    let newString = '';
+    const keyArray = Object.keys(someObject);
+    keyArray.forEach(value => newString = String(value) + newString)
+
+    return newString;
 }
 
 
