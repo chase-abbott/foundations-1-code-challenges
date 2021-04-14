@@ -50,7 +50,11 @@ Output:
 */
 
 export function organizePricesByKey(arr) {
-    return {};
+    const organizedObject = {};
+    arr.forEach(object => {
+        organizedObject[object.id] = object.price;
+    });
+    return organizedObject;
 }
 
 /*
@@ -104,5 +108,17 @@ Output:
 */
 
 export function countByCategory(arr) {
-    return {};
+    const categories = {};
+    const fruitA = arr.filter(object => object.category === 'fruit');
+    const dairyA = arr.filter(object => object.category === 'dairy');
+    const otherA = arr.filter(object => object.category === 'other');
+
+    // wanted to find a way to utilize the object.category to match the corresponding filtered array from above within the loop
+    arr.forEach(object => categories[object.category] = 0);
+
+    categories.fruit = fruitA.length;
+    categories.dairy = dairyA.length;
+    categories.other = otherA.length;
+
+    return categories;
 }

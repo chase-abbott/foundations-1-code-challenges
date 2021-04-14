@@ -22,7 +22,6 @@ export function makeMoreScreamingKeys(someObject) {
     const newObject = {};
 
     for (let key in someObject) {
-        let i = 0;
         let uppercaseKey = key.toUpperCase();
         let values = someObject[key];
 
