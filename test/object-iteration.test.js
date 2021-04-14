@@ -45,7 +45,7 @@ test('should make a string from the keys', (expect) => {
     expect.deepEqual(true, shouldBeTrue);
 });
 
-skip('should return tuples', (expect) => {
+test('should return tuples', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [

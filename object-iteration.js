@@ -63,5 +63,9 @@ Output:
 */
 
 export function makeTuples(someObject) {
-    return [];
+    const newArray = [];
+    for (let key in someObject) {
+        newArray.push(Array(key, someObject[key]));
+    }
+    return newArray;
 }
